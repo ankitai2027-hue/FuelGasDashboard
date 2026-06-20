@@ -112,7 +112,7 @@ if st.button("Reset to Initial Composition"):
 # TITLE
 # =====================================================
 
-st.title("Fuel Gas Parameters Calculator")
+st.title("Fuel Gas Parameters' Calculator")
 
 # =====================================================
 # COMPOSITION
