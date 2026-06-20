@@ -518,7 +518,7 @@ if valid_composition:
             writer,
             sheet_name=sheet_name,
             startrow=summary_row,
-            index=False
+            index=True
         )
 
         output.seek(0)
