@@ -328,6 +328,17 @@ if valid_composition:
     with m2:
         st.metric("Specific Gravity(SG) of Mixture", f"{mixture_SG:.3f}")
 
+
+    st.markdown("---")
+
+    m3, m4 = st.columns(2)
+
+    with m3:
+        st.metric("NCV, GCV")
+
+    with m4:
+        st.metric("Wobbe Index")
+
 # =====================================================
 # MIXTURE SUMMARY TABLE
 # =====================================================
@@ -353,7 +364,7 @@ if valid_composition:
             round(mixture_gcv_kcal_nm3_total,3)
         ],
 
-        "Wobbe Index": [
+        "Basis": [
             "ncv_basis",
             "gcv_basis"
         ],
