@@ -331,13 +331,7 @@ if valid_composition:
 
     st.markdown("---")
 
-    c3, c4 = st.columns([3, 1])
-
-with c3:
-    st.subheader("NCV,GCV")
-
-with c4:
-    st.subheader("Wobbe Index")    
+   
 
 # =====================================================
 # MIXTURE SUMMARY TABLE
@@ -349,39 +343,41 @@ if valid_composition:
 
     summary_df = pd.DataFrame({
 
-        "Basis": [
+      ('Calorific Values', 'Basis'): [
             "NCV",
             "GCV"
         ],
 
-        "kcal/kg": [
+      ('Calorific Values', 'kcal/kg'): [
             round(mixture_ncv_kcal_kg_total,3),
             round(mixture_gcv_kcal_kg_total,3)
         ],
 
-        "kcal/Nm³": [
+      ('Calorific Values', 'kcal/Nm³'): [
             round(mixture_ncv_kcal_nm3_total,3),
             round(mixture_gcv_kcal_nm3_total,3)
         ],
 
-        "Basis": [
+      ('Wobbe Index', 'Basis'): [
             "ncv_basis",
             "gcv_basis"
         ],
 
-        "in kcal/Nm³": [
+      ('Wobbe Index', 'kcal/Nm³'): [
             round(mixture_WobbeIndex_ncv_kcal_nm3,3),
             round(mixture_WobbeIndex_gcv_kcal_nm3,3)
         ],
 
-        "in MJ/Nm³": [
+      ('Wobbe Index', 'MJ/Nm³'): [
             round(mixture_WobbeIndex_ncv_MJ_nm3,3),
             round(mixture_WobbeIndex_gcv_MJ_Nm3,3)
         ]
     })
 
+    summary_df.columns = pd.MultiIndex.from_tuples(summary_df.columns)
+    
     st.subheader("Mixture Summary")
-
+    
     st.dataframe(
         summary_df,
         use_container_width=True
