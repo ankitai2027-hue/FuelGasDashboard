@@ -331,9 +331,7 @@ if valid_composition:
         st.metric("Specific Gravity(SG) of Mixture", f"{mixture_SG:.3f}")
 
 
-    st.markdown("---")
-
-   
+  
 
 # =====================================================
 # MIXTURE SUMMARY TABLE
