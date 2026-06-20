@@ -331,13 +331,13 @@ if valid_composition:
 
     st.markdown("---")
 
-    m3, m4 = st.columns(2)
+    c3, c4 = st.columns([3, 1])
 
-    with m3:
-        st.metric("NCV, GCV")
+with c3:
+    st.subheader("NCV,GCV")
 
-    with m4:
-        st.metric("Wobbe Index")
+with c4:
+    st.subheader("Wobbe Index")    
 
 # =====================================================
 # MIXTURE SUMMARY TABLE
