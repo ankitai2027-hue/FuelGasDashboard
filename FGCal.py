@@ -440,23 +440,33 @@ if valid_composition:
     
     
     custom_css = {
-    
-        ".ag-header-group-cell-label": {
-            "justify-content": "center",
-            "font-size": "22px",
-            "font-weight": "bold",
-            "color": "#800080"
-    
-        },
-    
-        ".ag-header-cell-label": {
-        
-            "font-size": "16px",
-            "font-weight": "bold"
-    
-        }
-    
+
+    ".ag-header-group-cell-label": {
+        "justify-content": "center",
+        "font-size": "22px",
+        "font-weight": "bold",
+        "color": "#1f77b4"
+    },
+
+    ".ag-header-cell-label": {
+        "justify-content": "center",
+        "font-size": "16px",
+        "font-weight": "bold"
+    },
+
+    ".ag-cell": {
+        "border-right": "1px solid #d0d0d0"
+    },
+
+    ".ag-header-cell": {
+        "border-right": "1px solid #d0d0d0"
+    },
+
+    ".ag-header-group-cell": {
+        "border-right": "1px solid #d0d0d0"
     }
+
+}
     
     
     st.subheader("Mixture Summary")
