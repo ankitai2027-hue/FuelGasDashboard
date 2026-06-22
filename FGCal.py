@@ -339,8 +339,7 @@ if valid_composition:
 
 if valid_composition:
 
-    st.markdown("---")
-
+st.markdown("""
 <style>
 thead th {
     font-size: 30px !important;
