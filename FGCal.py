@@ -206,28 +206,29 @@ for gas in gas_list:
 
     # Slider
     with row_cols[4]:
-    if valid_composition:
-        st.markdown(
-            "<div style='padding:3px;border:2px solid green;border-radius:5px'>",
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            "<div style='padding:3px;border:2px solid red;border-radius:5px'>",
-            unsafe_allow_html=True
-        )
-        st.slider(
-            label="",
-            min_value=0.0,
-            max_value=100.0,
-            step=0.01,
-            key=f"{gas}_slider",
-            on_change=update_input,
-            label_visibility="collapsed",
-            format="%.3f"
-        )
         
-st.markdown("</div>", unsafe_allow_html=True)
+        if valid_composition:
+            st.markdown(
+                "<div style='padding:3px;border:2px solid green;border-radius:5px'>",
+                unsafe_allow_html=True
+            )
+        else:
+            st.markdown(
+                "<div style='padding:3px;border:2px solid red;border-radius:5px'>",
+                unsafe_allow_html=True
+            )
+            st.slider(
+                label="",
+                min_value=0.0,
+                max_value=100.0,
+                step=0.01,
+                key=f"{gas}_slider",
+                on_change=update_input,
+                label_visibility="collapsed",
+                format="%.3f"
+            )
+            
+    st.markdown("</div>", unsafe_allow_html=True)
 
     # Manual Vol% input
     with row_cols[5]:
