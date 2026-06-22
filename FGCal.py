@@ -341,10 +341,11 @@ if valid_composition:
 
     st.markdown("---")
 
-    <style>
+<style>
 thead th {
     font-size: 30px !important;
     color: red !important;
+    font-weight: bold !important;
 }
 </style>
 """, unsafe_allow_html=True)
