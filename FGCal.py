@@ -442,15 +442,15 @@ if valid_composition:
     custom_css = {
     
         ".ag-header-group-cell-label": {
-    
+            "justify-content": "center",
             "font-size": "22px",
             "font-weight": "bold",
-            "color": "#1f77b4"
+            "color": "#800080"
     
         },
     
         ".ag-header-cell-label": {
-    
+        
             "font-size": "16px",
             "font-weight": "bold"
     
