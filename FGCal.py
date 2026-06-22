@@ -284,7 +284,7 @@ else:
 # =====================================================
 with row_cols[4]:
         if valid_composition:
-            slider_color = "#4169E1" if valid_composition else "#F63366"
+            slider_color = "#008000" if valid_composition else "#F63366"
 
             st.markdown(f"""
 <style>
