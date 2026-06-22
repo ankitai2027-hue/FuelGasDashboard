@@ -248,7 +248,7 @@ valid_composition = (
     95 <= total <= 105
 )
 
-c1, c2 = st.columns([3, 1])
+c1, c2 = st.columns([2, 1])
 
 with c1:
     st.subheader("Total Composition")
