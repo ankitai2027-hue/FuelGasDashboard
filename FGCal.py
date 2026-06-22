@@ -341,6 +341,14 @@ if valid_composition:
 
     st.markdown("---")
 
+    <style>
+thead th {
+    font-size: 30px !important;
+    color: red !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
     summary_df = pd.DataFrame({
 
       ('Calorific Values', 'Basis'): [
