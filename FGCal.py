@@ -382,6 +382,7 @@ if valid_composition:
     
             {
                 "headerName": "Calorific Values",
+                "headerClass": "center-header",
     
                 "children": [
     
@@ -405,6 +406,7 @@ if valid_composition:
     
             {
                 "headerName": "Wobbe Index",
+                "headerClass": "center-header",
     
                 "children": [
     
@@ -442,7 +444,6 @@ if valid_composition:
     custom_css = {
 
     ".ag-header-group-cell-label": {
-        "justify-content": "center",
         "font-size": "22px",
         "font-weight": "bold",
         "color": "#1f77b4"
