@@ -382,7 +382,7 @@ if valid_composition:
     
             {
                 "headerName": "Calorific Values",
-                "headerClass": "center-header",
+                
     
                 "children": [
     
@@ -406,7 +406,7 @@ if valid_composition:
     
             {
                 "headerName": "Wobbe Index",
-                "headerClass": "center-header",
+        
     
                 "children": [
     
@@ -445,12 +445,15 @@ if valid_composition:
 
     ".ag-header-group-cell-label": {
         "font-size": "22px",
+        "justify-content": "center",
+        "width": "100%",
         "font-weight": "bold",
         "color": "#1f77b4"
     },
 
     ".ag-header-cell-label": {
         "justify-content": "center",
+        "width": "100%",
         "font-size": "16px",
         "font-weight": "bold"
     },
