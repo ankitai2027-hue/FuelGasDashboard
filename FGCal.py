@@ -293,7 +293,7 @@ with row_cols[4]:
                 "<div style='padding:3px;border:2px solid red;border-radius:5px'>",
                 unsafe_allow_html=True
             )
- st.markdown("</div>", unsafe_allow_html=True)
+            st.markdown("</div>", unsafe_allow_html=True)
 # =====================================================
 # NCV, GCV, Wobbe Index Calculation
 # =====================================================
