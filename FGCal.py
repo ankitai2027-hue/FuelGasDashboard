@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from st_aggrid import AgGrid
 
 st.set_page_config(layout="wide") 
 # =====================================================
@@ -338,60 +339,144 @@ if valid_composition:
 # =====================================================
 
 if valid_composition:
-
-    st.markdown("""
-    <style>
-    thead th {
-        font-size: 30px !important;
-        color: red !important;
-        font-weight: bold !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
+    st.markdown("---")
+    
     summary_df = pd.DataFrame({
-
-      ('Calorific Values', 'Basis'): [
+    
+        'CV_Basis': [
             "NCV",
             "GCV"
         ],
-
-      ('Calorific Values', 'kcal/kg'): [
+    
+        'CV_kcalkg': [
             round(mixture_ncv_kcal_kg_total,3),
             round(mixture_gcv_kcal_kg_total,3)
         ],
-
-      ('Calorific Values', 'kcal/Nm³'): [
+    
+        'CV_kcalNm3': [
             round(mixture_ncv_kcal_nm3_total,3),
             round(mixture_gcv_kcal_nm3_total,3)
         ],
-
-      ('Wobbe Index', 'Basis'): [
+    
+        'WI_Basis': [
             "ncv_basis",
             "gcv_basis"
         ],
-
-      ('Wobbe Index', 'kcal/Nm³'): [
+    
+        'WI_kcalNm3': [
             round(mixture_WobbeIndex_ncv_kcal_nm3,3),
             round(mixture_WobbeIndex_gcv_kcal_nm3,3)
         ],
-
-      ('Wobbe Index', 'MJ/Nm³'): [
+    
+        'WI_MJNm3': [
             round(mixture_WobbeIndex_ncv_MJ_nm3,3),
             round(mixture_WobbeIndex_gcv_MJ_Nm3,3)
         ]
+    
     })
-
-    summary_df.columns = pd.MultiIndex.from_tuples(summary_df.columns)
+    
+    
+    gridOptions = {
+    
+        "columnDefs": [
+    
+            {
+                "headerName": "Calorific Values",
+    
+                "children": [
+    
+                    {
+                        "field": "CV_Basis",
+                        "headerName": "Basis"
+                    },
+    
+                    {
+                        "field": "CV_kcalkg",
+                        "headerName": "kcal/kg"
+                    },
+    
+                    {
+                        "field": "CV_kcalNm3",
+                        "headerName": "kcal/Nm³"
+                    }
+    
+                ]
+            },
+    
+            {
+                "headerName": "Wobbe Index",
+    
+                "children": [
+    
+                    {
+                        "field": "WI_Basis",
+                        "headerName": "Basis"
+                    },
+    
+                    {
+                        "field": "WI_kcalNm3",
+                        "headerName": "kcal/Nm³"
+                    },
+    
+                    {
+                        "field": "WI_MJNm3",
+                        "headerName": "MJ/Nm³"
+                    }
+    
+                ]
+            }
+    
+        ],
+    
+        "defaultColDef": {
+    
+            "sortable": True,
+            "filter": False,
+            "resizable": True
+    
+        }
+    
+    }
+    
+    
+    custom_css = {
+    
+        ".ag-header-group-cell-label": {
+    
+            "font-size": "22px",
+            "font-weight": "bold",
+            "color": "#1f77b4"
+    
+        },
+    
+        ".ag-header-cell-label": {
+    
+            "font-size": "16px",
+            "font-weight": "bold"
+    
+        }
+    
+    }
+    
     
     st.subheader("Mixture Summary")
     
-    st.dataframe(
+    
+    AgGrid(
+    
         summary_df,
-        use_container_width=True
+    
+        gridOptions=gridOptions,
+    
+        custom_css=custom_css,
+    
+        fit_columns_on_grid_load=True,
+    
+        height=170
+    
     )
-
-from io import BytesIO
+    
+    from io import BytesIO
 
 # =====================================================
 # EXPORT TABLE (same as dashboard, excluding slider)
