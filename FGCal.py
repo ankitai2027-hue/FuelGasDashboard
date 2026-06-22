@@ -339,15 +339,15 @@ if valid_composition:
 
 if valid_composition:
 
-st.markdown("""
-<style>
-thead th {
-    font-size: 30px !important;
-    color: red !important;
-    font-weight: bold !important;
-}
-</style>
-""", unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+    thead th {
+        font-size: 30px !important;
+        color: red !important;
+        font-weight: bold !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
     summary_df = pd.DataFrame({
 
