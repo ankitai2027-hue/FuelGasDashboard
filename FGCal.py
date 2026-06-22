@@ -443,14 +443,27 @@ if valid_composition:
     
     custom_css = {
 
-    ".ag-header-group-cell-label": {
+    ".cv-header": {
         "font-size": "22px",
         "justify-content": "center",
         "width": "100%",
     
         "font-weight": "bold",
-        "color": "#1f77b4"
+        "color": "#4169E1"
     },
+
+    ".wi-header":{
+
+        "font-size": "22px",
+        "justify-content": "center",
+        "width": "100%",
+    
+        "font-weight": "bold",
+        "color": "#483D8B"
+
+}
+
+}
 
     ".ag-header-cell-label": {
        
