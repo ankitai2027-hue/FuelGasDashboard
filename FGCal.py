@@ -449,7 +449,7 @@ if valid_composition:
         "width": "80%",
     
         "font-weight": "bold",
-        "color": "#4169E1"
+        "color": "#A52A2A"
     },
 
     ".wi-header":{
