@@ -207,16 +207,7 @@ for gas in gas_list:
     # Slider
     with row_cols[4]:
         
-        if valid_composition:
-            st.markdown(
-                "<div style='padding:3px;border:2px solid green;border-radius:5px'>",
-                unsafe_allow_html=True
-            )
-        else:
-            st.markdown(
-                "<div style='padding:3px;border:2px solid red;border-radius:5px'>",
-                unsafe_allow_html=True
-            )
+
             st.slider(
                 label="",
                 min_value=0.0,
@@ -228,7 +219,7 @@ for gas in gas_list:
                 format="%.3f"
             )
             
-    st.markdown("</div>", unsafe_allow_html=True)
+   
 
     # Manual Vol% input
     with row_cols[5]:
@@ -288,6 +279,21 @@ else:
 
     )
 
+# =====================================================
+# Slider Styling
+# =====================================================
+with row_cols[4]:
+        if valid_composition:
+            st.markdown(
+                "<div style='padding:3px;border:2px solid green;border-radius:5px'>",
+                unsafe_allow_html=True
+            )
+        else:
+            st.markdown(
+                "<div style='padding:3px;border:2px solid red;border-radius:5px'>",
+                unsafe_allow_html=True
+            )
+ st.markdown("</div>", unsafe_allow_html=True)
 # =====================================================
 # NCV, GCV, Wobbe Index Calculation
 # =====================================================
