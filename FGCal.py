@@ -288,13 +288,18 @@ with row_cols[4]:
 
             st.markdown(f"""
 <style>
-.stSlider [data-baseweb="slider"] [role="slider"] {{
+
+/* Slider thumb */
+.stSlider [role="slider"] {{
+    background-color: {slider_color} !important;
+    border-color: {slider_color} !important;
+}}
+
+/* Filled portion of track */
+.stSlider [data-baseweb="slider"] div[data-testid="stThumbValue"] {{
     background-color: {slider_color} !important;
 }}
 
-.stSlider [data-baseweb="slider"] div {{
-    background-color: {slider_color} !important;
-}}
 </style>
 """, unsafe_allow_html=True)
 
