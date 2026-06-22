@@ -382,7 +382,7 @@ if valid_composition:
     
             {
                 "headerName": "Calorific Values",
-                
+                "headerClass": "cv-header",
     
                 "children": [
     
@@ -406,7 +406,7 @@ if valid_composition:
     
             {
                 "headerName": "Wobbe Index",
-        
+                "headerClass": "wi-header",
     
                 "children": [
     
