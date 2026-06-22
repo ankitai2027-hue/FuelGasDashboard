@@ -445,7 +445,8 @@ if valid_composition:
 
     ".ag-header-group-cell-label": {
         "font-size": "22px",
-       
+        "justify-content": "center",
+        "width": "100%",
     
         "font-weight": "bold",
         "color": "#1f77b4"
