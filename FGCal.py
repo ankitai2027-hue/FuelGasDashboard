@@ -446,7 +446,7 @@ if valid_composition:
     ".cv-header": {
         "font-size": "22px",
         "justify-content": "center",
-        "width": "100%",
+        "width": "80%",
     
         "font-weight": "bold",
         "color": "#4169E1"
@@ -456,7 +456,7 @@ if valid_composition:
 
         "font-size": "22px",
         "justify-content": "center",
-        "width": "100%",
+        "width": "80%",
     
         "font-weight": "bold",
         "color": "#483D8B"
