@@ -463,6 +463,7 @@ if valid_composition:
 
     },
 
+
     
 
     ".ag-header-cell-label": {
