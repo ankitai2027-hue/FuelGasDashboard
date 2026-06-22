@@ -461,9 +461,9 @@ if valid_composition:
         "font-weight": "bold",
         "color": "#483D8B"
 
-    }
+    },
 
-    }
+    
 
     ".ag-header-cell-label": {
        
@@ -484,7 +484,7 @@ if valid_composition:
         "border-right": "1px solid #d0d0d0"
     }
 
-    
+}
     
     st.subheader("Mixture Summary")
     
