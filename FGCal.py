@@ -284,16 +284,15 @@ else:
 # =====================================================
 with row_cols[4]:
         if valid_composition:
-            st.markdown(
-                "<div style='padding:3px;border:2px solid green;border-radius:5px'>",
-                unsafe_allow_html=True
-            )
-        else:
-            st.markdown(
-                "<div style='padding:3px;border:2px solid red;border-radius:5px'>",
-                unsafe_allow_html=True
-            )
-            st.markdown("</div>", unsafe_allow_html=True)
+            slider_color = "#4169E1" if valid_composition else "#FF0000"
+
+            st.markdown(f"""
+            <style>
+            .stSlider [data-baseweb="slider"] {{
+                accent-color: {slider_color};
+            }}
+            </style>
+            """, unsafe_allow_html=True)
 # =====================================================
 # NCV, GCV, Wobbe Index Calculation
 # =====================================================
